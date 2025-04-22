@@ -46,9 +46,9 @@ We demonstrate a novel table discovery pipeline called DIALITE that allows users
       ```
   * On windows:
       ```
-      python -m venv env
-      .\env\Scripts\activate.bat
-      where.exe python
+      py -3.11 -m venv env311 
+      .\env311\Scripts\activate 
+      pip install --upgrade pip setuptools wheel
       ```
 
 3. Install necessary packages. 
@@ -94,14 +94,14 @@ We demonstrate a novel table discovery pipeline called DIALITE that allows users
 
   * On Windows:
     ```
-    set FLASK_APP=main.py
-    set FLASK_DEBUG=1
+    $env:FLASK_APP = "main.py"
+    Remove-Item Env:FLASK_DEBUG -ErrorAction SilentlyContinue
     ```
     If you want to turn off the debug mode, set FLASK_DEBUG=0.
 
 6. Start Flask Application in a terminal.
     ```
-    python main.py
+    flask run --port=3000   
     ```
 
 7. Open the link shown in the terminal using any web browser. The browser must support HTML5 and javascript.

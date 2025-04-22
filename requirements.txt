@@ -1,5 +1,5 @@
 Flask>=2.2.3
-openai>=0.27.2
+openai>=0.28
 pandas>=1.5.3
 numpy>=1.22.2
 gdown>=4.6.4
